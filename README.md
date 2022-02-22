@@ -8,4 +8,4 @@ https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-15.htm
 
 The great thing about this book is that each exercise builds on the last and so you really do notice your ability to code developing.
 
-The other interesting thing is that when you return to a programming language like C# with a full IDE at your disposal and tests, you find that because you have been coding with your hands behind your back using the esoteric language scheme, you feel all the benefits of the language features that a fully fledged language has to give like C#.
+The other interesting thing is that when you return to a programming language like C# with an IDE at your disposal and the ability to test your code, you find that because you have been coding with your hands behind your back using the esoteric language from the book (a lisp dialect called Scheme), you feel all the benefits of the language features that a fully developed language has to give. 
