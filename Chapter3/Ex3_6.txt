@@ -39,3 +39,11 @@ If internal is -1 then I want to set internal to the randupdate of the seed.
 If internal then isn't -1 I want it to be set to the new randupdate of internal. 
 
 So I think the current version of rand-seed is creating multiple different objects with an internal value of -1.
+Instead of having one object, I have 2 differnt objects...
+
+The issue with rand seed at the moment is that every time it is called it is overwriting 
+the internal variable to it never goes dow the second path of the if statement. 
+
+So my question is how do I stop this value from being overwritten. 
+
+I feel like I need 2 variables that arein differnt scopes. 
