@@ -37,3 +37,5 @@ There is no denying that we do need a function that the function needs to take a
 So I'm going to initialize a value which is called internal to -1 on the first call of my rand-seed function. 
 If internal is -1 then I want to set internal to the randupdate of the seed. 
 If internal then isn't -1 I want it to be set to the new randupdate of internal. 
+
+So I think the current version of rand-seed is creating multiple different objects with an internal value of -1.

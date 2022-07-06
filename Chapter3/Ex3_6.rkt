@@ -20,7 +20,11 @@
           (lambda ()
 	    (set! internal (rand-update seed))
 	    internal))
-	2)))
+	(begin 
+	  (printf "The value of internal: ~a \n" internal)
+          (lambda ()
+	    (set! internal (rand-update internal))
+	    internal)))))
 
 (define (new-rand m)
   (define generate (rand))
