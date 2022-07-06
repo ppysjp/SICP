@@ -1,0 +1,66 @@
+#lang racket
+
+(define (make-accumulator initial)
+  (lambda (amount)
+    (begin (set! initial (+ initial amount))
+	   initial)))
+
+(define (make-monitored-wishful f)
+  (lambda (input)
+    (if (eq? input 'how-many-calls?)
+	"Number of Counts"
+	(if (eq? input 'reset-count)
+	    "Reset Count"
+	    (begin (f input)
+		   ("Increment Counter"))))))
+
+(sqrt 2)
+
+(define s (make-monitored-wishful sqrt))
+
+;; Could be refactored to use cond.
+
+(s 'how-many-calls?)
+(s 'reset-count)
+;;(s 100)
+
+(define (make-counter)
+  (let ((accumulator (make-accumulator 0))
+	(count 0))
+    (define (calls) count)
+    (define (increment) (set! count (accumulator 1)))
+    (define (reset) (begin (set! accumulator (make-accumulator 0))
+			   (set! count 0)))
+    (define (dispatch m)
+      (cond ((eq? m 'how-many-calls?) calls)
+	    ((eq? m 'increment) increment)
+	    ((eq? m 'reset-count) reset)
+	    (else (error "Unknown request --MAKE-ACCUMULATOR" m))))
+    dispatch))
+
+(define C (make-counter))
+
+((C 'how-many-calls?))
+((C 'increment))
+((C 'increment))
+((C 'how-many-calls?))
+((C 'reset-count))
+((C 'how-many-calls?))
+
+
+(define (make-monitored f)
+  (let ((C (make-counter)))
+   (lambda (input)
+    (if (eq? input 'how-many-calls?)
+	((C input))
+	(if (eq? input 'reset-count)
+	    ((C input))
+	    (begin ((C 'increment))
+		   (f input)))))))
+
+(define s1 (make-monitored sqrt))
+
+;; Could be refactored to use cond.
+
+(s1 100)
+(s1 'how-many-calls?)

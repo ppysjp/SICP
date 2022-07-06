@@ -1,0 +1,39 @@
+SICP
+----
+
+I'm trying to do exercise 3_6.
+To do this 
+
+
+So I think that this new-rand object needs an internal state object which I will call seed. 
+I will also redefine rand and call it  rand and call it  rand and call it rand seed. 
+Ok so my rand-seed function is not doing as I expected which is a bit annoying. 
+by seeding it every time it is called it doesn't generate new random numbers.
+I wonder if it is because I'm using x every time so I'm going to remove the let.  
+
+I need a function that I can seed externally that will produce random numbers. 
+
+I need to be able to create a seeded random function. 
+I want to be able to passs into the random function the seed. 
+And then I want the random function to keep that seed in perpituity.  
+At the moment my ran seed is producing the same number every time it is called. 
+The reason for this is it is everytime it is called wiht seed the rand-update function is being called 
+with an argument of 40. 
+
+It's really quite hard to know what to do here. 
+
+Maybe I need two internal variables. 
+One that keeps the initial seed value. Let's call that one x. 
+And the other we can call y the value that updates. 
+I think the reason that I'm having issues is that x is being ovewritten every time seed is being called. 
+
+------
+
+So I think the reason I struggled partly yesterday solving this was because I didn't fully understand what the book 
+was trying to explain to me. 
+
+There is no denying that we do need a function that the function needs to take an argument. 
+
+So I'm going to initialize a value which is called internal to -1 on the first call of my rand-seed function. 
+If internal is -1 then I want to set internal to the randupdate of the seed. 
+If internal then isn't -1 I want it to be set to the new randupdate of internal. 
