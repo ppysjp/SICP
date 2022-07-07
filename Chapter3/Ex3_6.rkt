@@ -6,37 +6,21 @@
 ; I'm going to define a new rand that
 ;will solve will be the solution to this problem.
 
-(define rand
-  (let ((x 50))
-    (lambda ()
-      (set! x (rand-update x))
-      x)))
+(define (r)
+  (let ((seed 0)
+	(define (dispatch m)
+	  (cond ((eq? m 'reset) (lambda (x (set! seed x))))
+		((eq? m 'generate) (begin (set! seed (rand-update seed))
+					  seed))
+		(else error "invalid operation")))
+	dispatch)))
 
-(define (rand-seed seed)
-  (let ((internal -1))
-    (if (= internal -1)
-	(begin 
-	  (printf "The value of internal: ~a \n" internal)
-          (lambda ()
-	    (set! internal (rand-update seed))
-	    internal))
-	(begin 
-	  (printf "The value of internal: ~a \n" internal)
-          (lambda ()
-	    (set! internal (rand-update internal))
-	    internal)))))
+(define rand (r))
 
-(define (new-rand m)
-  (define generate (rand))
-  (define reset (lambda (x) (+ x 4)))
-  (define (dispatch m)
-    (cond ((eq? m 'generate) generate)
-	  ((eq? m 'reset) reset)
-	  (else (error "Unknown request -- MAKE-ACCOUNT" m))))
-  (dispatch m))
+(rand 'generate)
+(rand 'generate)
+(rand 'generate)
+(rand 'generate)
 
-((new-rand 'reset) 4) 
-(new-rand 'generate)
 
-((rand-seed 50))
-((rand-seed 50))
+

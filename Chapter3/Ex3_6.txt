@@ -52,3 +52,13 @@ Day 3
 ----- 
 
 So my thinking is that I'll create rand seed by nesting rand into it...
+I'm still running into the same problem.
+I'm going to read on a bit and see if I can see the solution elsewhere. 
+It looks as though to me there are separate objects being created every time 
+and it's not a single object that is being created and then updated each time it is 
+called. 
+
+Struggled hard on this one. The seed needed to be internalised to the function. 
+I also don't understand clojures. 
+So yeah. 
+Annying a bit. 
