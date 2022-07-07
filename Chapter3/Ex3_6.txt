@@ -47,3 +47,8 @@ the internal variable to it never goes dow the second path of the if statement.
 So my question is how do I stop this value from being overwritten. 
 
 I feel like I need 2 variables that arein differnt scopes. 
+
+Day 3
+----- 
+
+So my thinking is that I'll create rand seed by nesting rand into it...
