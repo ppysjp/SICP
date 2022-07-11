@@ -17,13 +17,12 @@
 
 
 
-
-
 (define (r)
   (let ((seed 0))
     (define (dispatch m)
-      (cond ((eq? m 'reset) (begin (set! seed 0)
-				    seed))
+      (cond ((eq? m 'reset) (lambda (x)
+			      (begin (set! seed x)
+					   seed)))
 	    ((eq? m 'generate)(begin (set! seed (rand-update seed))
 				    	   seed))
 	    (else (error "Unknown request --RANDOM-NUMBER-GENERATOR" m))))
@@ -32,11 +31,14 @@
 
 (define rand (r))
 
-(rand 'reset)
+((rand 'reset) 0)
 (rand 'generate)
 (rand 'generate)
+((rand 'reset) 6)
 (rand 'generate)
-(rand 'reset)
+(rand 'generate)
+((rand 'reset) 0)
+(rand 'generate)
 (rand 'generate)
 
 
