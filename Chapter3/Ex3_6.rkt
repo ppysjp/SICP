@@ -15,16 +15,27 @@
 	(m (+ 1 (expt 2 16))))
     (modulo (+ (* a x) b) m)))
 
+
+
+
+
 (define (r)
-  (define (dispatch m)
-      (cond ((eq? m 'reset) (print "RESET"))
-	    ((eq? m 'generate) (print "GENERATE"))
+  (let ((seed 0))
+    (define (dispatch m)
+      (cond ((eq? m 'reset) (begin (set! seed 0)
+				    seed))
+	    ((eq? m 'generate)(begin (set! seed (rand-update seed))
+				    	   seed))
 	    (else (error "Unknown request --RANDOM-NUMBER-GENERATOR" m))))
-  dispatch)
+    dispatch))
 
 
 (define rand (r))
 
+(rand 'reset)
+(rand 'generate)
+(rand 'generate)
+(rand 'generate)
 (rand 'reset)
 (rand 'generate)
 
