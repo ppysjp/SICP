@@ -62,3 +62,10 @@ Struggled hard on this one. The seed needed to be internalised to the function.
 I also don't understand clojures. 
 So yeah. 
 Annying a bit. 
+
+
+Day 4
+-----
+
+So we want the random number object to have internal state now that it calls the functions 
+in the way that I want it to.
