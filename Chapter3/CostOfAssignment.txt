@@ -1,0 +1,4 @@
+The moral of this section is that so far in chapters one and two, when we have done assignemnt 
+we have just been "naming" values. When we introduce assignment, we not only name a value 
+but we are also introducing a place where a value is stored and that the value stored 
+at this place can change.
