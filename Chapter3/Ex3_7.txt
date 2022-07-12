@@ -16,3 +16,11 @@ I think I'm going to use an OR statement to make the new account use both passwo
 I think this can be done quite concisely...
 I'm going to create a function called password-correct? That will determine whether the password 
 is accepetable for calling the functions in the make-joint.
+Successfully created a password checker for my joint account called correct-password. 
+I think I'm now ready to make the make-joint function. 
+
+So I think you can make the make-joint account largely from the make-account code
+You need two initial variables, one will be the balance from the other account and the 
+other will be a list of the two passwords and then the new account will make use of 
+
+that stuff..
