@@ -1,0 +1,4 @@
+So we are just reminding ourselves the iterative functional way of doing the factorial function. 
+And then we are going to look at an iterative form.
+
+When doing imperative programming it is important to note the order in which the states are set.
