@@ -1,0 +1,18 @@
+The make-decrementer doesn't have "state". So D1 and D2 have the same out put, they always subtract
+a value from 25 in this case. So if you had a program that made use of D1, you could interchange
+D2 and get exactly the same result. 
+
+The make-simplified-withdraw however does have state which means that each object that is created
+you can think of as having a place in memory as well. So call to W1 actually has a diffent 
+effect to making a call W2. 
+
+The question that arises is how do we determine whterh 2 objects are the same. 
+We can observe an object before and after changing, and then check the properties to see if 
+they are the same or have changed. 
+We have to decide what we mean what sameness is for an object to be able to determine whether
+it has changed.  
+
+The book has this circular argument... 
+
+"We cannot determine "change" wihtout some a priori notion of "sameness" and we cannot 
+determine samenes without observing the effects of change.

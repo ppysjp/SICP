@@ -1,0 +1,11 @@
+#lang racket
+
+(define (make-simplified-withdraw balance)
+  (lambda (amount)
+    (begin (set! balance (-balance amount))
+	  balance)))
+
+
+(define (make-decrementer balance)
+  (lambda (amount)
+    (- balance amount)))
