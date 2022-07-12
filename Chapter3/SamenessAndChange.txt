@@ -18,3 +18,10 @@ The book has this circular argument...
 determine samenes without observing the effects of change.
 
 So we are now going to see an example that allows us to see the issue at hand...
+
+So the peter-acc and the paul-acc are two separate objects with different locations.
+They are distinct.
+
+In the case of zack-acc and sam-acc, they are essentially a joint account. If we are searching
+for all the places in our code that zack-acc can be changed we need to look for the places 
+where sam-acc can also be chagned. 

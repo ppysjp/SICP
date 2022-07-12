@@ -31,3 +31,11 @@
 	  ((eq? m 'deposit) deposit)
 	  (else (error "Unknown request -- MaKE-ACCOUNT" m))))
   dispatch)
+
+
+(define peter-acc (make-account 100))
+(define paul-acc (make-account 100))
+
+
+(define zack-acc (make-account 100))
+(define sam-acc zack-acc)
