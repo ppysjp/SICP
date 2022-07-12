@@ -1,0 +1,2 @@
+So I need to be able to use the code from exercise 3. 
+I'm going to google how to import from a racket file.
