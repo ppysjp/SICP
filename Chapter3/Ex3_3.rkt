@@ -43,11 +43,11 @@
       (cond ((not (eq? p password)) incorrect-password)
 	    ((and (eq? p password) (eq? m 'withdraw)) withdraw)
 	    ((and (eq? p password) (eq? m 'deposit)) deposit)
+	    ((and (eq? p password) (eq? m 'balance)) balance)
 	    (else (error "Unknown request -- MAKE-ACCOUNT" m))))
     dispatch))
 
 (define acc (make-account 100 'secret-password))
-
 ;((acc 'some-other-password 'withdraw) 40)
 ;((acc 'some-other-password 'withdraw) 40)
 ;((acc 'some-other-password 'withdraw) 40)

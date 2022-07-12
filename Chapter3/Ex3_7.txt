@@ -1,2 +1,12 @@
 So I need to be able to use the code from exercise 3. 
 I'm going to google how to import from a racket file.
+I'm trying to create a joint account. 
+I need to take advantage of the stuff from page 233 where we get the account to point 
+at the same location. 
+The joint account needs to share the same value for it's balance.
+But it needs to use the new-password as the message that is passed for the withdrawal
+to occur. 
+So I think I need to have access to the balance of the original account.
+The change that will be required for this is in the original make-account functionn. 
+So let's do that... 
+So I now have away of accessing the initial value of the joint account.

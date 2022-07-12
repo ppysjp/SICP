@@ -2,6 +2,13 @@
 
 (require "Ex3_3.rkt")
 
-(define acc (make-account 100 'secret-password))
+(define peter-acc (make-account 100 'open-sesame))
 
-((acc 'secret-password 'withdraw) 40)
+
+((peter-acc 'open-sesame 'withdraw) 40)
+
+(peter-acc 'open-sesame 'balance)
+
+
+;; (define (make-joint account password new-password)
+;;   )
