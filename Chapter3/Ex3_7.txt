@@ -10,3 +10,9 @@ So I think I need to have access to the balance of the original account.
 The change that will be required for this is in the original make-account functionn. 
 So let's do that... 
 So I now have away of accessing the initial value of the joint account.
+So now I have a way of accessing the account balance I think I want to rip a lot of the 
+code that was used for the make-account function. 
+I think I'm going to use an OR statement to make the new account use both passwords...
+I think this can be done quite concisely...
+I'm going to create a function called password-correct? That will determine whether the password 
+is accepetable for calling the functions in the make-joint.
