@@ -48,3 +48,7 @@ that allows me to add a password to the list of passwords to be checked.
 
 So I've added another function to the make-account which should in theory mean that I can 
 add a password to the list of passwords which can be used to access the account.
+
+So now we can use the additional-access function to create a joint-account...
+
+Ok so let's copy the code from the book that we want to work...

@@ -2,6 +2,21 @@
 
 (require "Ex3_3.rkt")
 
+; We need to create a way of verifying multiple passwords.
+
+(define (correct-password? passwords m)
+  (cond ((null? passwords) false)
+	((eq? (car passwords) m) true)
+	(else (correct-password? (cdr passwords) m))))
+
+(define passwords null)
+;(define passwords (list 'open-sesame 'rose-bud))
+
+(correct-password? passwords 'hello)
+(correct-password? passwords 'open-sesame)
+(correct-password? passwords 'rose-bud)
+
+
 (define (make-account balance password)
   (let ((C (make-counter))
 	(passwords (list password)))
@@ -38,8 +53,6 @@
     dispatch))
 
 (define peter-acc (make-account 100 'open-sesame))
-
-
 ((peter-acc 'open-sesame 'withdraw) 40)
 
 (peter-acc 'open-sesame 'balance)
@@ -48,24 +61,33 @@
 (display "At the moment the balance isn't displayed")
 (display "Using the additonal access method we should access the balance.\n")
 
-((peter-acc 'open-sesame 'additional-access) 'wrong-password)
-(peter-acc 'wrong-password 'balance)
+
+; Solution to exercise 3.7 is actually very consise. 
+
+(define (make-joint account password new-password)
+  (begin ((account password 'additional-access) new-password)
+	 account))
+
+(define paul-acc (make-joint peter-acc 'open-sesame 'rose-bud))
+
+((peter-acc 'rose-bud 'withdraw) 10)
+((paul-acc 'rose-bud 'withdraw) 10)
+
+(display "retrieve balance from both peter and paul's account\n")
+(display "In total the account should display a balance of 40...\n")
+
+(peter-acc 'open-sesame 'balance)
+(paul-acc 'rose-bud 'balance)
 
 
 
-;; (define (make-joint account password new-password)
-;;   )
 
-(define (correct-password? passwords m)
-  (cond ((null? passwords) false)
-	((eq? (car passwords) m) true)
-	(else (correct-password? (cdr passwords) m))))
 
-(define passwords null)
-;(define passwords (list 'open-sesame 'rose-bud))
 
-(correct-password? passwords 'hello)
-(correct-password? passwords 'open-sesame)
-(correct-password? passwords 'rose-bud)
+
+
+
+
+
 
 
