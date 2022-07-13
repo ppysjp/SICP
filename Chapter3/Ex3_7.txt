@@ -24,3 +24,12 @@ You need two initial variables, one will be the balance from the other account a
 other will be a list of the two passwords and then the new account will make use of 
 
 that stuff..
+
+It says in the question that make joint is to make an additional access to the original account.
+So I think I'm going to create a new function which called make additional access 
+after I have modified the make account to use the correct-password? function that I made 
+yesterday. 
+
+I've copied the version of make-account object into the Ex3_7.rkt file.
+
+I intend to make changes to it here.

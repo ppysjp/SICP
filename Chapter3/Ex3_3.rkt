@@ -57,4 +57,4 @@
 ;((acc 'some-other-password 'withdraw) 40)
 ;((acc 'some-other-password 'withdraw) 40)
 
-(provide make-accumulator make-counter make-account)
+(provide make-accumulator make-counter)
