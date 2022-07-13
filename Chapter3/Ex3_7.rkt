@@ -19,7 +19,7 @@
       balance)
     (define (call-the-cops) "Call the Cops!")
     (define (additional-access new-password)
-      (cons new-password passwords))
+      (begin (set! passwords (cons new-password passwords))))
     ;; (define (incorrect-password)
     ;;   (if (> ((C 'how-many-calls?)) 6)
     ;; 	  (call-the-cops)
@@ -44,6 +44,13 @@
 
 (peter-acc 'open-sesame 'balance)
 (peter-acc 'wrong-password 'balance)
+
+(display "At the moment the balance isn't displayed")
+(display "Using the additonal access method we should access the balance.\n")
+
+((peter-acc 'open-sesame 'additional-access) 'wrong-password)
+(peter-acc 'wrong-password 'balance)
+
 
 
 ;; (define (make-joint account password new-password)
