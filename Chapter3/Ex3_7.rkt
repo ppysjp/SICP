@@ -3,7 +3,12 @@
 (require "Ex3_3.rkt")
 
 (define (make-account balance password)
-  (let ((C (make-counter)))
+  (let ((C (make-counter))
+	(passwords (list password)))
+    (define (correct-password? passwords m)
+      (cond ((null? passwords) false)
+	((eq? (car passwords) m) true)
+	(else (correct-password? (cdr passwords) m))))
     (define (withdraw amount)
       (if (>= balance amount)
 	  (begin (set! balance (- balance amount))

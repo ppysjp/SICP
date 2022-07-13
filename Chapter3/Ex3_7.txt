@@ -33,3 +33,7 @@ yesterday.
 I've copied the version of make-account object into the Ex3_7.rkt file.
 
 I intend to make changes to it here.
+
+So what I'm going to do is add another varialbe to the make-account function which is called
+passwords. I expect the make-account function to work in exactly the same manner as before.
+So the first step to do this has been to ad the correct-password? function to the object.
