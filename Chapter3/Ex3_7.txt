@@ -37,3 +37,14 @@ I intend to make changes to it here.
 So what I'm going to do is add another varialbe to the make-account function which is called
 passwords. I expect the make-account function to work in exactly the same manner as before.
 So the first step to do this has been to ad the correct-password? function to the object.
+
+So now I want to add a function that allows us to extend the account. 
+But before I do that I want to use my correct-password? implementation.
+So hopefully it will work.
+
+I've commented out the implmentation of incorrect-password because it is not needed.
+Anyway it is at this point that I need to create a function which is called additonal access
+that allows me to add a password to the list of passwords to be checked.
+
+So I've added another function to the make-account which should in theory mean that I can 
+add a password to the list of passwords which can be used to access the account.
