@@ -5,10 +5,10 @@
 (define (make-account balance password)
   (let ((C (make-counter))
 	(passwords (list password)))
-    (define (correct-password? passwords m)
+    (define (correct-password? passwords p)
       (cond ((null? passwords) false)
-	((eq? (car passwords) m) true)
-	(else (correct-password? (cdr passwords) m))))
+	((eq? (car passwords) p) true)
+	(else (correct-password? (cdr passwords) p))))
     (define (withdraw amount)
       (if (>= balance amount)
 	  (begin (set! balance (- balance amount))
@@ -48,7 +48,8 @@
 	((eq? (car passwords) m) true)
 	(else (correct-password? (cdr passwords) m))))
 
-(define passwords (list 'open-sesame 'rose-bud))
+(define passwords null)
+;(define passwords (list 'open-sesame 'rose-bud))
 
 (correct-password? passwords 'hello)
 (correct-password? passwords 'open-sesame)
