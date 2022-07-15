@@ -13,13 +13,24 @@
 ;; 	       0)
 ;;       a)))
 
+;; (define (g)
+;;   (lambda (x)
+;;     (let ((a 0))
+;;       (display "The value of a: ")
+;;       (display a)
+;;       (display "\n")
+;;       (if (= x 1)
+;; 	  (begin (set! a (+ a 1))
+;; 		 0)
+;;           a))))
+
 (define (g)
-  (lambda (x)
-    (let ((a 0))
+  (let ((a 0))
       (display "The value of a: ")
       (display a)
       (display "\n")
-      (if (= x 1)
+      (lambda (x)
+	(if (= x 1)
 	  (begin (set! a (+ a 1))
 		 0)
           a))))
@@ -29,6 +40,7 @@
 (f 1)
 (f 1)
 (f 1)
+(f 10)
 
 
 
