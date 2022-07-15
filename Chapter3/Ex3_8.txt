@@ -14,3 +14,11 @@ So let's create a function without state that does that...
 
 At the moment I will always get 0 because f is a pure function. So I need to get a none pure function.
 To do that I'm going to introduce an internal state varialbe.
+So now I've got an internal varibale even though I'm not really using it..
+
+So the way that the function is going to work is that if 1 is supplied the internal variable will be incremented but
+it always returns 0 other wise the internal variable is returned.
+
+I've just realised that I need to use a lambda! The reason being that I'm just creating 'a's but they are different ones
+that are being updated....
+This piece of code needs modifying. 
