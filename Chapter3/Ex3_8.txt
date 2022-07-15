@@ -1,0 +1,16 @@
+So I think that we are going to need a function that has internal statevariable. 
+We need a function that if (f 0) and then (f 1) is called then we get 0.
+On the other hand if we call (f 1) and then (f 0) we get 1. 
+To do this I'm going to have an internal state variable to my function f that is initialised
+to a value. 
+
+Cool. I'm not going to care if it is wrong.
+
+We can test this out by assigning the value of whatever is returned by f(x) and then adding.
+
+well what two numbers when added together make 0? 
++ 0 0 makes 0. 
+So let's create a function without state that does that...
+
+At the moment I will always get 0 because f is a pure function. So I need to get a none pure function.
+To do that I'm going to introduce an internal state varialbe.
