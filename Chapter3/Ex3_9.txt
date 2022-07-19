@@ -3,3 +3,6 @@ by the recursive and iterative form of the factorial function.
 
 To do this I need ot understand the environment model but these functions don't make use of assignment 
 so I don't think I need to worry about that for now.
+
+The thing we are being tested on in this section is on page 240 which tells us how a procedre is applied
+using the environment model.
