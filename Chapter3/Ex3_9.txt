@@ -6,3 +6,8 @@ so I don't think I need to worry about that for now.
 
 The thing we are being tested on in this section is on page 240 which tells us how a procedre is applied
 using the environment model.
+
+I think that what hte question is trying to teach is that essentially the frames that are generated from the 
+recursive and iterative forms will be fundamentamentally different...
+
+I think I can draw the answer...
