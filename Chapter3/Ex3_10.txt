@@ -6,3 +6,6 @@ first.
 
 Now that I have created the withdraw object so that it uses the stuff from the book,
 I need to create a new withdraw object that uses the lambda form of let...
+
+Ok so I've created the make-withdraw procedure that doesn't make use of the let expression
+but makes use of a nested lambda expression.
