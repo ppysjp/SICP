@@ -3,3 +3,6 @@ has an internal variable. The first thing I'm going to do is to convert this
 make-withdraw into one that doesn't use let but uses lambda. 
 The first step on the other hand is to create the lambda so I'm going to do that 
 first. 
+
+Now that I have created the withdraw object so that it uses the stuff from the book,
+I need to create a new withdraw object that uses the lambda form of let...
