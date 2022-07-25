@@ -1,4 +1,4 @@
- so for this question I've been asked to create a drawing of the environment structure that is created 
+Ok so for this question I've been asked to create a drawing of the environment structure that is created 
 by the recursive and iterative form of the factorial function.
 
 To do this I need ot understand the environment model but these functions don't make use of assignment 
