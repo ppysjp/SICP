@@ -19,3 +19,6 @@ is like speaking german, why kick the verb to the end??? But heyy helps by kicki
 to the end we can draw a nice environemnt model...
 
 so I've just created the environment for W1 object with an initial balance of 100...
+
+it says in the question that the environment structures are different so you should take this into 
+account tomorrow.
