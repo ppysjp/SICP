@@ -23,4 +23,15 @@ so I've just created the environment for W1 object with an initial balance of 10
 it says in the question that the environment structures are different so you should take this into 
 account tomorrow.
 
-So yeah I need to model the environment and it has to to be different to what we ahave already seen
+So yeah I need to model the environment and it has to to be different to what we ahave already seen.
+
+Looking at the book when the defintion is made the lambda is kept as part of the body..
+However, when an instance of the object is created the lambda is stripped and an environment
+is created. 
+
+So my theory is that with this make-withdraw that uses the extra let that it basically makes
+use of 2 environments to be instantiated so that we get to the stage that the two lambdas 
+have been stripped. 
+
+
+
