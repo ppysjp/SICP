@@ -22,3 +22,5 @@ so I've just created the environment for W1 object with an initial balance of 10
 
 it says in the question that the environment structures are different so you should take this into 
 account tomorrow.
+
+So yeah I need to model the environment and it has to to be different to what we ahave already seen
