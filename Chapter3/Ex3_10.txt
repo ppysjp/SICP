@@ -35,5 +35,8 @@ have been stripped.
 
 I'm just going to have another read.
 
+So another thing that I have gleaned from rereading, is that 'define' is just a away of 
+creating a function without arguments it looks like from the book. 
+
 
 

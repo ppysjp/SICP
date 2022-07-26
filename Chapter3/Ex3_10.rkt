@@ -25,9 +25,9 @@
 
 (W2 20)
 
+(define square (lambda (x) (* x x)))
 
-
-
+(square 3)
 
 
 
