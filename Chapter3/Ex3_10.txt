@@ -33,5 +33,7 @@ So my theory is that with this make-withdraw that uses the extra let that it bas
 use of 2 environments to be instantiated so that we get to the stage that the two lambdas 
 have been stripped. 
 
+I'm just going to have another read.
+
 
 
