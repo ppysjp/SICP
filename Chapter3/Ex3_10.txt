@@ -41,5 +41,8 @@ creating a function without arguments it looks like from the book.
 I mean could we go a step further and basically make the make-withdraw completely with lambda's? 
 Cool, I think I understand...
 
+So by introducing the let there are more environemnts because essentially there a more lambda'says
 
-
+So I'm right in thinking that because we are using a let statement that there should be multiple
+frames created when we instantiate an object... 
+"An envirionemnt is a sequence of frames".
