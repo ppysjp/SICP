@@ -52,3 +52,8 @@ hmm...
 Definitely getting close to what is going on...
 
 Ok so we are now trying to determine what happens when the state of the W1 object is changed.
+
+So I think I've drawn it up correctly now. Essentially the environment is quite a lot more different. 
+There are way additional frames that are produced by introducing the let statement. 
+Personally eventhough this takes up more memory technically I am in favour of this for readability, 
+but it's nice to know that you can make savings by avoiding using let to name local variables.
