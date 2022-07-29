@@ -1,1 +1,3 @@
 So I need to draw the environment and all of the evaluations that happen for the make-withdraw procedure.
+cool. 
+So I've set up the question to be able to proceed with it :) 
