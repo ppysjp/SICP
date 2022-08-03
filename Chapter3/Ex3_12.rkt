@@ -1,0 +1,34 @@
+#lang racket
+
+(require rnrs/mutable-pairs-6)
+
+(define (append x y)
+	(if (null? x)
+		y
+		(mcons (car x) (append (cdr x) y))))
+
+(define (append! x y)
+	(set-mcdr! (last-pair x) y)
+	x)
+
+
+(define (last-pair x)
+	(if (null (mcdr x))
+		x
+		(last-pair (mcdr x))))
+
+(define x (list 'a 'b))
+(define y (list 'c 'd))
+(define z (append x y))
+
+z
+
+(cdr x) 
+
+; naturally I think this will be ('b null)
+
+;(define w (append! x y))
+
+;w
+
+;(mcdr x)
