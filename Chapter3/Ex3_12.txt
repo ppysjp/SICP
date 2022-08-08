@@ -6,3 +6,5 @@ In order to be able to do this question in racket you have install a library and
 use the mutable version of of cons,car and cdr which are denoted mcons, mcar and mcdr.
 
 Cool so now I'm going to make some further progress on the questions at hand. 
+
+Draw box and pointer digram to show what (cdr x) is.
