@@ -4,3 +4,5 @@ Ok so I've just read the section.
 I'm now going to read the question and make sure I understand it.
 In order to be able to do this question in racket you have install a library and then
 use the mutable version of of cons,car and cdr which are denoted mcons, mcar and mcdr.
+
+Cool so now I'm going to make some further progress on the questions at hand. 
