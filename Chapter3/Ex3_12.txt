@@ -8,3 +8,6 @@ use the mutable version of of cons,car and cdr which are denoted mcons, mcar and
 Cool so now I'm going to make some further progress on the questions at hand. 
 
 Draw box and pointer digram to show what (cdr x) is.
+
+My thinking was correct. The box and pointer diagram I drew was correct and now that I got the 
+correct library working for the file I'm working it's working which is good :) 
