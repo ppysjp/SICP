@@ -1,11 +1,12 @@
 #lang racket
 
 (require rnrs/mutable-pairs-6)
+(require compatibility/mlist)
 
 (define (append x y)
 	(if (null? x)
 		y
-		(mcons (car x) (append (cdr x) y))))
+		(mcons (mcar x) (append (mcdr x) y))))
 
 (define (append! x y)
 	(set-mcdr! (last-pair x) y)
@@ -13,17 +14,19 @@
 
 
 (define (last-pair x)
-	(if (null (mcdr x))
+	(if (null? (mcdr x))
 		x
 		(last-pair (mcdr x))))
 
-(define x (list 'a 'b))
-(define y (list 'c 'd))
+(define x (mlist 'a 'b))
+(define y (mlist 'c 'd))
 (define z (append x y))
 
 z
 
-(cdr x) 
+(mcdr x)
+
+x
 
 ; naturally I think this will be ('b null)
 

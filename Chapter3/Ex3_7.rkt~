@@ -1,3 +1,0 @@
-#lang racket
-
-(require "Ex3_3.rkt")

@@ -1,5 +1,0 @@
-#lang racket
-
-(require "Ex3_5.rkt")
-
-(rand 3)
