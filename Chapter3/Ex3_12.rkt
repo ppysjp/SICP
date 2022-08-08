@@ -1,6 +1,5 @@
 #lang racket
 
-(require rnrs/mutable-pairs-6)
 (require compatibility/mlist)
 
 (define (append x y)
@@ -30,8 +29,8 @@ x
 
 ; naturally I think this will be ('b null)
 
-;(define w (append! x y))
+(define w (append! x y))
 
-;w
+w
 
-;(mcdr x)
+(mcdr x)
