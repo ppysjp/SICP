@@ -27,10 +27,6 @@ z
 
 x
 
-; naturally I think this will be ('b null)
-
-;(define w (append x y))
-
 (define w (append! x y))
 
 w
