@@ -17,3 +17,6 @@ and the 'append!' function. It looks to me as though the latter has isolated whe
 change of state takes place, whereas with the original append function we weren't too sure
 how it was working. Essentially the 'append!' function reads more easily at the cost of 
 introducing state.
+
+In this quetion we are intirduced to the idea of a 'mutator' rather than a 'constructor'
+where 'append!' is the former and 'append' is the latter. 
