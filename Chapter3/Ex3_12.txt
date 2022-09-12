@@ -11,3 +11,9 @@ Draw box and pointer digram to show what (cdr x) is.
 
 My thinking was correct. The box and pointer diagram I drew was correct and now that I got the 
 correct library working for the file I'm working it's working which is good :) 
+
+I think what is interesting about this question is that there is the 'append' function 
+and the 'append!' function. It looks to me as though the latter has isolated where the 
+change of state takes place, whereas with the original append function we weren't too sure
+how it was working. Essentially the 'append!' function reads more easily at the cost of 
+introducing state.
