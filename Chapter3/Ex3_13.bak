@@ -20,5 +20,3 @@
 (define z (make-cycle (mlist 'a 'b 'c)))
 
 z
-
-(last-pair z)

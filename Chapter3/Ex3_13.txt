@@ -1,1 +1,7 @@
 Setting up the question currently.
+
+What is the box pointer that is formed from this mutable list to create z?
+
+We get a list whose final pointer points at the initial car of the list.
+
+If we perform last-pair on z, we enter into an infinite loop.
