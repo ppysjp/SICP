@@ -1,5 +1,4 @@
 #lang racket
-
 (require compatibility/mlist)
 
 (define (last-pair x)
@@ -21,4 +20,4 @@
 
 z
 
-(last-pair z)
+;(last-pair z)
