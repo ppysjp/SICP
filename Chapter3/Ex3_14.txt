@@ -1,0 +1,1 @@
+So mystery reverses a mutable list. 
