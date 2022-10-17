@@ -1,0 +1,2 @@
+So I think we are now looking at different data structures that can be formed from just 
+lists and pairs
